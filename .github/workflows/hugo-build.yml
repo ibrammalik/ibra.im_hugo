@@ -13,13 +13,13 @@ jobs:
     steps:
       # 1️⃣ Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 2️⃣ Install Hugo Extended
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v0.112
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.128.0'
+          hugo-version: '0.152.2'
           extended: true
 
       # 3️⃣ Build Hugo site
@@ -34,7 +34,7 @@ jobs:
 
       # 5️⃣ Start ssh-agent and add key from secrets
       - name: Setup SSH Agent
-        uses: webfactory/ssh-agent@v0.8.1
+        uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
