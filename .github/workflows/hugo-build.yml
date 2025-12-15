@@ -38,13 +38,8 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
-      - name: Add server to known_hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.SSH_HOSTNAME }} >> ~/.ssh/known_hosts
-
       # 6️⃣ Sync public/ folder to server via SSH + Cloudflared
       - name: Sync public folder via Cloudflared
         run: |
           # Sync public/ folder
-          rsync -avz -e "ssh -o ProxyCommand='cloudflared access tcp --hostname %h'" ./public ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }}:${{ secrets.DESTINATION }}
+          rsync -avz -e "ssh -o StrictHostKeyChecking=no ProxyCommand='cloudflared access tcp --hostname %h'" ./public ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }}:${{ secrets.DESTINATION }}
