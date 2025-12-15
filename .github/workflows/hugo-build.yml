@@ -38,6 +38,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H your-tunnel-hostname >> ~/.ssh/known_hosts
+
       # 6️⃣ Sync public/ folder to server via SSH + Cloudflared
       - name: Sync public folder via Cloudflared
         run: |
