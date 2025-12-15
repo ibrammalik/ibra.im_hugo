@@ -24,7 +24,7 @@ jobs:
 
       # 3️⃣ Build Hugo site
       - name: Build Hugo
-        run: hugo --minify
+        run: hugo
 
       # 4️⃣ Install Cloudflared
       - name: Install Cloudflared
