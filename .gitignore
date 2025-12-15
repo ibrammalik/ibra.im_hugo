@@ -1,0 +1,45 @@
+# --------------------------
+# Hugo build outputs
+# --------------------------
+/public/
+/resources/_gen/
+/node_modules/
+
+# --------------------------
+# OS / Editor files
+# --------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# --------------------------
+# Secrets / Env
+# --------------------------
+.env
+.env.local
+*.pem
+*.key
+
+# --------------------------
+# Docker / Containers / Volumes
+# --------------------------
+*.log
+docker-compose.override.yml
+**/docker-compose.override.yml
+**/tmp/
+**/cache/
+
+# --------------------------
+# GitHub Actions / CI
+# --------------------------
+/.github/workflows/.DS_Store
+
+# --------------------------
+# Others
+# --------------------------
+*.out
+*.exe
+*.class

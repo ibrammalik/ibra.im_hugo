@@ -1,0 +1,45 @@
+name: Build and Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2️⃣ Install Hugo Extended
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v0.112
+        with:
+          hugo-version: '0.128.0'
+          extended: true
+
+      # 3️⃣ Build Hugo site
+      - name: Build Hugo
+        run: hugo --minify
+
+      # 4️⃣ Install Cloudflared
+      - name: Install Cloudflared
+        run: |
+          curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -o cloudflared.deb
+          sudo dpkg -i cloudflared.deb
+
+      # 5️⃣ Start ssh-agent and add key from secrets
+      - name: Setup SSH Agent
+        uses: webfactory/ssh-agent@v0.8.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      # 6️⃣ Sync public/ folder to server via SSH + Cloudflared
+      - name: Sync public folder via Cloudflared
+        run: |
+          # Sync public/ folder
+          rsync -avz -e "ssh -o ProxyCommand='cloudflared access tcp --hostname %h'" ./public ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }}:${{ secrets.DESTINATION }}
