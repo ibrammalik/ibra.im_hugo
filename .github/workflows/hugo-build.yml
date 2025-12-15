@@ -42,4 +42,4 @@ jobs:
       - name: Sync public folder via Cloudflared
         run: |
           # Sync public/ folder
-          rsync -avz -e "ssh -o StrictHostKeyChecking=no -o ProxyCommand='cloudflared access tcp --hostname %h'" ./public ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }}:${{ secrets.DESTINATION }}
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -o ProxyCommand='cloudflared access tcp --hostname %h'" ./public ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOSTNAME }}:${{ secrets.DESTINATION }}
