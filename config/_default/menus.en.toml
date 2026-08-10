@@ -31,60 +31,16 @@
 #  pageRef = "posts"
 #  weight = 20
 
-[[subnavigation]]
- name = "An interesting topic"
- pageRef = "tags/interesting-topic"
- weight = 10
+# [[subnavigation]]
+#  name = "An interesting topic"
+#  pageRef = "tags/interesting-topic"
+#  weight = 10
 
-[[subnavigation]]
- name = "My Awesome Category 1"
- pre = "github"
- pageRef = "categories/awesome"
- weight = 20
-
-[[subnavigation]]
- name = "An interesting topic 2"
- pageRef = "tags/interesting-topic"
- weight = 10
-
-[[subnavigation]]
- name = "My Awesome Category3"
- pre = "github"
- pageRef = "categories/awesome"
- weight = 20
-
-[[subnavigation]]
- name = "An interesting topic4"
- pageRef = "tags/interesting-topic"
- weight = 10
-
-[[subnavigation]]
- name = "My Awesome Category5"
- pre = "github"
- pageRef = "categories/awesome"
- weight = 20
-
-[[subnavigation]]
- name = "An interesting topic 21"
- pageRef = "tags/interesting-topic"
- weight = 10
-
-[[subnavigation]]
- name = "My Awesome Category32"
- pre = "github"
- pageRef = "categories/awesome"
- weight = 20
-
-[[subnavigation]]
- name = "An interesting topic43"
- pageRef = "tags/interesting-topic"
- weight = 10
-
-[[subnavigation]]
- name = "My Awesome Category54"
- pre = "github"
- pageRef = "categories/awesome"
- weight = 20
+# [[subnavigation]]
+#  name = "My Awesome Category"
+#  pre = "github"
+#  pageRef = "categories/awesome"
+#  weight = 20
 
 #[[main]]
 #  name = "Categories"
