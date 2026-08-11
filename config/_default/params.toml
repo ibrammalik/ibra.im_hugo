@@ -163,11 +163,11 @@ defaultBackgroundImage = "img/background.jpg" # used as default for background i
   # enableTrackEvent = true
 
 [buymeacoffee]
-  # identifier = ""
-  # globalWidget = true
-  # globalWidgetMessage = "Hello"
-  # globalWidgetColor = "#FFDD00"
-  # globalWidgetPosition = "right"
+  identifier = "ibra_mmalik"
+  globalWidget = true
+  globalWidgetMessage = "Buy me a coffee"
+  globalWidgetColor = "#FFDD00"
+  globalWidgetPosition = "right"
 
 [verification]
   # google = ""
