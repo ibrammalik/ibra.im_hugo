@@ -165,7 +165,7 @@ defaultBackgroundImage = "img/background.jpg" # used as default for background i
 [buymeacoffee]
   identifier = "ibra_mmalik"
   globalWidget = true
-  globalWidgetMessage = "Buy me a coffee"
+  globalWidgetMessage = ""
   globalWidgetColor = "#FFDD00"
   globalWidgetPosition = "right"
 
