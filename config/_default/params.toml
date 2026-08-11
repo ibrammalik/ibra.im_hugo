@@ -139,13 +139,13 @@ defaultBackgroundImage = "img/background.jpg" # used as default for background i
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+  apiKey = "AIzaSyDFXEc0OZlamIOx_m-0qbQSkyfmpp-mKw4"
+  authDomain = "ibraimhugo-2b482.firebaseapp.com"
+  projectId = "ibraimhugo-2b482"
+  storageBucket = "ibraimhugo-2b482.firebasestorage.app"
+  messagingSenderId = "722616833497"
+  appId = "1:722616833497:web:24973cce2a74a810c175c8"
+  measurementId = "G-BKMK9SJ7B1"
 
 [fathomAnalytics]
   # site = "ABC12345"
