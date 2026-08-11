@@ -21,7 +21,7 @@ weight: 1
 | ------------ | ------------------- | ----------------------- |
 | Framework    | Laravel             | Backend MVC             |
 | Admin Panel  | Filament            | CRUD, UI                |
-| Database     | MySQL / PostgreSQL  | Data storage            |
+| Database     | MySQL               | Data storage            |
 | ORM          | Eloquent            | Database abstraction    |
 | GIS          | Leaflet.js + Geoman | Map & polygon           |
 | Desktop      | NativePHP           | Offline app             |
