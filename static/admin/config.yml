@@ -16,3 +16,41 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Date, name: date, widget: datetime, type: date }
       - { label: Body, name: body, widget: richtext }
+
+  - name: projects
+    label: Projects
+    folder: /content/projects
+
+    # Create:
+    # content/projects/my-project/index.md
+    path: '{{slug}}/index'
+
+    # Upload images into the same folder as index.md
+    media_folder: ''
+    public_folder: ''
+
+    thumbnail: featuredImage
+
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Date
+        name: date
+        widget: datetime
+        type: date
+
+      - label: Featured Image
+        name: featuredImage
+        widget: image
+        required: false
+
+      - label: Description
+        name: description
+        widget: text
+        required: false
+
+      - label: Body
+        name: body
+        widget: markdown
